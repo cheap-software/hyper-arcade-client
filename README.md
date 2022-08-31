@@ -1,1 +1,1 @@
-# hyper-arcade-client
+# Hyper Arcade Client
