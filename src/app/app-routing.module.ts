@@ -9,6 +9,7 @@ import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { MultiplayerMenuComponent } from './components/multiplayer-menu/multiplayer-menu.component';
 import { OnePlayerMenuComponent } from './components/one-player-menu/one-player-menu.component';
 import { SettingsPageComponent } from './components/settings-page/settings-page.component';
+import { SnakeMultiplayerScreenComponent } from './components/snake-multiplayer-screen/snake-multiplayer-screen.component';
 import { WaitingRoomPageComponent } from './components/waiting-room-page/waiting-room-page.component';
 import { WelcomeContainerComponent } from './components/welcome-container/welcome-container.component';
 
@@ -39,6 +40,9 @@ const routes: Routes = [
   },
   {
     path: 'waiting-room', component: WaitingRoomPageComponent, title: 'Waiting Room'
+  }, 
+  {
+    path: 'snake-multiplayer', component: SnakeMultiplayerScreenComponent, title: 'Classic Snake Multiplayer'
   }
 ];
 

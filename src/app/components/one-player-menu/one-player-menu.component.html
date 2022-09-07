@@ -1,1 +1,18 @@
-<p>one-player-menu works!</p>
+<div class="card">
+    <div class="container">
+        <br>
+        <h3 class="card-title">
+            One Player Games
+        </h3>
+        <p>
+            Play alone, just relax
+        </p>
+        <div class="row">
+            <div *ngFor="let game of games; let i = index" class="col-sm-4">
+                <app-game-card name="{{ game.name }}" subtitle="{{ game.subtitle }}"
+                    imgref="{{ game.imgref }}" description="{{ game.description }}" players="{{ game.players }} player">
+                </app-game-card>
+            </div>
+        </div>
+    </div>
+</div>

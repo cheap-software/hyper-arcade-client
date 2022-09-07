@@ -1,1 +1,56 @@
-<p>main-menu works!</p>
+<div class="container">
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" data-bs-toggle="tab" href="#one-player" aria-selected="true" role="tab">One
+                Player</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" data-bs-toggle="tab" href="#multiplayer" aria-selected="false"
+                role="tab">Multiplayer</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" data-bs-toggle="tab" href="#account" aria-selected="false" role="tab">Account</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" data-bs-toggle="tab" href="#settings" aria-selected="false" role="tab">Settings</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" data-bs-toggle="tab" href="#about" aria-selected="false" role="tab">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#quit" aria-selected="false" role="tab">Quit</a>
+        </li>
+
+    </ul>
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade active show" id="one-player" role="tabpanel">
+            <app-one-player-menu></app-one-player-menu>
+        </div>
+        <div class="tab-pane fade" id="multiplayer" role="tabpanel">
+            <app-multiplayer-menu></app-multiplayer-menu>
+        </div>
+        <div class="tab-pane fade" id="account" role="tabpanel">
+            <app-account-page></app-account-page>
+        </div>
+        <div class="tab-pane fade" id="settings" role="tabpanel">
+            <app-settings-page></app-settings-page>
+        </div>
+        <div class="tab-pane fade" id="about" role="tabpanel">
+            <app-about-page></app-about-page>
+        </div>
+        <div class="tab-pane fade" id="quit" role="tabpanel">
+            <figure>
+                <blockquote class="blockquote">
+                    <p class="mb-0">Are you sure you want to go out?</p>
+                </blockquote>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-lg btn-primary" type="button">Yes</button>
+                    <button class="btn btn-lg btn-primary" type="button">No</button>
+                </div>
+                <br>
+                <div class="text-center">
+                    <img class="img-responsive" src="../../../assets/images/gif-14.gif" width="30%">
+                </div>
+            </figure>
+        </div>
+    </div>

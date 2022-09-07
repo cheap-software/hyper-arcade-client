@@ -16,6 +16,13 @@ import { SettingsPageComponent } from './components/settings-page/settings-page.
 import { AboutPageComponent } from './components/about-page/about-page.component';
 import { WelcomeContainerComponent } from './components/welcome-container/welcome-container.component';
 import { AnonymousLoginPageComponent } from './components/anonymous-login-page/anonymous-login-page.component';
+import { AccountPageComponent } from './components/account-page/account-page.component';
+import { GameCardComponent } from './components/game-card/game-card.component';
+import { InputImgPreviewComponent } from './components/input-img-preview/input-img-preview.component';
+import { SnakeMultiplayerScreenComponent } from './components/snake-multiplayer-screen/snake-multiplayer-screen.component';
+
+import { WebsocketService } from './services/websocket.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -32,13 +39,17 @@ import { AnonymousLoginPageComponent } from './components/anonymous-login-page/a
     SettingsPageComponent,
     AboutPageComponent,
     WelcomeContainerComponent,
-    AnonymousLoginPageComponent
+    AnonymousLoginPageComponent,
+    AccountPageComponent,
+    GameCardComponent,
+    InputImgPreviewComponent,
+    SnakeMultiplayerScreenComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [WebsocketService, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,8 @@
+<div class="img-preview">
+    <!-- file input, accepts images only. Detect when file has been picked/changed with Angular's native (change) event listener -->
+    <input type="file" accept="image/*" (change)="updateSource($event)">
+    <!-- Icon as placeholder when no file picked -->
+    <img *ngIf="!source" src="../../../assets/images/test-image.png" class="image-circular">
+    <!-- img placeholder when a file has been picked. shows only when 'source' is not empty -->
+    <img *ngIf="source" [src]="source" src="" class="image-circular">
+</div>

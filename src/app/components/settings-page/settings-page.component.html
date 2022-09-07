@@ -1,1 +1,178 @@
-<p>settings-page works!</p>
+<div class="accordion" id="settings_accordion" style="margin-bottom: 5%; margin-top: 2%;">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="lenguage_settings">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse_lenguage_settings" aria-expanded="false"
+                aria-controls="collapse_lenguage_settings">
+                Lenguage Settings
+            </button>
+        </h2>
+        <div id="collapse_lenguage_settings" class="accordion-collapse collapse" aria-labelledby="lenguage_settings"
+            data-bs-parent="#settings_accordion">
+            <div class="accordion-body">
+                <form>
+                    <fieldset class="form-group">
+                        <legend class="mt-4">Default Lenguage</legend>
+                        <p class="card-text">Select the global lenguage for the
+                            application. We are still working to give you more
+                            lenguages!</p>
+                        <select class="form-select" aria-label="Select lenguage">
+                            <option selected value="1">English</option>
+                            <option value="2">Spanish</option>
+                            <option value="3">German</option>
+                        </select>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="sound_settings">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse_sound_settings" aria-expanded="false" aria-controls="collapse_sound_settings">
+                Sound Settings
+            </button>
+        </h2>
+        <div id="collapse_sound_settings" class="accordion-collapse collapse" aria-labelledby="sound_settings"
+            data-bs-parent="#settings_accordion">
+            <div class="accordion-body">
+                <fieldset class="form-group">
+                    <legend class="mt-4">System Sounds</legend>
+                    <p class="card-text">Select the general sound configuration for the
+                        application. You can change this configuration during a play.</p>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="play_background_music_checkbox" checked="">
+                        <label class="form-check-label" for="play_background_music_checkbox">Enable background
+                            music</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="play_noises_checkbox" checked="">
+                        <label class="form-check-label" for="play_noises_checkbox">Enable noises</label>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="theme_settings">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse_theme_settings" aria-expanded="false" aria-controls="collapse_theme_settings">
+                Theme Settings
+            </button>
+        </h2>
+        <div id="collapse_theme_settings" class="accordion-collapse collapse" aria-labelledby="theme_settings"
+            data-bs-parent="#settings_accordion">
+            <div class="accordion-body">
+                <form>
+                    <fieldset class="form-group">
+                        <legend class="mt-4">Default Theme</legend>
+                        <p class="card-text">Select the general theme of the application.
+                            It may be necessary to refresh the site to see the changes.</p>
+                        <select class="form-select" aria-label="Select theme">
+                            <option selected value="1">Dark</option>
+                            <option value="2">White</option>
+                            <option value="3">Red</option>
+                            <option value="4">Blue</option>
+                            <option value="5">Monochromatic</option>
+                        </select>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="control_settings">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse_control_settings" aria-expanded="false"
+                aria-controls="collapse_control_settings">
+                Control Settings
+            </button>
+        </h2>
+        <div id="collapse_control_settings" class="accordion-collapse collapse" aria-labelledby="control_settings"
+            data-bs-parent="#settings_accordion">
+            <div class="accordion-body">
+                <form>
+                    <fieldset class="form-group">
+                        <legend class="mt-4">Default Controls</legend>
+                        <p class="card-text">Select the default controls for playing
+                            the games in the application.</p>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-floating mb-3">
+                                    <input type="text" value="W" class="form-control" id="up_key">
+                                    <label for="up_key">Up Key</label>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-floating mb-3">
+                                    <input type="text" value="S" class="form-control" id="down_key">
+                                    <label for="down_key">Down Key</label>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-floating mb-3">
+                                    <input type="text" value="A" class="form-control" id="left_key">
+                                    <label for="left_key">Left Key</label>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-floating mb-3">
+                                    <input type="text" value="D" class="form-control" id="right_key">
+                                    <label for="right_key">Right Key</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="user_settings">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse_user_settings" aria-expanded="false" aria-controls="collapse_user_settings">
+                User Settings
+            </button>
+        </h2>
+        <div id="collapse_user_settings" class="accordion-collapse collapse" aria-labelledby="user_settings"
+            data-bs-parent="#settings_accordion">
+            <div class="accordion-body">
+                <form>
+                    <fieldset class="form-group">
+                        <legend class="mt-4">Account configuration</legend>
+                        <p class="card-text">Change your account details for
+                            a customezied experience on the application. You need to set
+                            your old password in order to save the changes.
+                        </p>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h4 for="sett_image" class="form-label mt-4">Profile Picture</h4>
+                                <p class="card-text">Click on the image to change the picture
+                                </p><br>
+                                <div class="text-center">
+                                    <app-input-img-preview id="sett_image"></app-input-img-preview>
+                                </div>
+                            </div>
+                            <div class="col-sm-6" style="padding-right: 5%;">
+                                <label for="sett_username" class="form-label mt-4">Change your username</label>
+                                <input value="Current User" type="text" class="form-control" id="sett_username"
+                                    placeholder="Enter your new username">
+                                <label for="sett_new_password" class="form-label mt-4">Set your new password. Leave in
+                                    blank to
+                                    keep your current password.</label>
+                                <input type="password" class="form-control" id="sett_new_password"
+                                    placeholder="Enter your new password">
+                                <label for="sett_old_password" class="form-label mt-4">Type your old password</label>
+                                <input type="password" class="form-control" id="sett_old_password"
+                                    placeholder="Enter your old password">
+                                <br>
+                                <button type="submit" class="btn btn-primary">Save User Settings</button>
+                            </div>
+                        </div>
+                    </fieldset><br><br>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

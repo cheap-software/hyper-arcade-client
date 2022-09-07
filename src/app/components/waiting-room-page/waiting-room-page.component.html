@@ -1,1 +1,23 @@
-<p>waiting-room-page works!</p>
+<div class="card" style="margin-right: 10%; margin-left: 10%; padding: 2%;">
+    <div class="container">
+        <br>
+        <h3 class="card-title">Waiting Room</h3>
+        <br>
+        <p class="text-info"><strong>Code: </strong>ABCDEF</p>
+        <p class="text-info"><strong>Number of players: </strong>1 of 4</p>
+        <p class="text-info"><strong>Selected Game: </strong>Classic Snake</p>
+        <form>
+            <button type="submit" class="btn btn-primary" disabled="">Init Game</button>
+            <br>
+        </form>
+        <br>
+
+        <div class="row">
+            <div *ngFor="let game of games; let i = index" class="col-sm-4">
+                <app-game-card name="{{ game.name }}" subtitle="{{ game.subtitle }}"
+                    imgref="{{ game.imgref }}" description="{{ game.description }}" players="{{ game.players }} players">
+                </app-game-card>
+            </div>
+        </div>
+    </div>
+</div>

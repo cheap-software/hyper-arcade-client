@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InputImgPreviewComponent } from '../input-img-preview/input-img-preview.component';
 
 @Component({
   selector: 'app-settings-page',
