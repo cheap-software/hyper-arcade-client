@@ -6,23 +6,25 @@
                     <h4 class="card-title">Signup</h4>
                     <h6 class="card-subtitle mb-2 text-muted">Create an account for playing the best arcade videogames
                         with your friends!</h6>
-                    <form>
+                    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
                         <fieldset>
                             <div class="form-group">
                                 <label for="signup_username" class="form-label mt-4">Username</label>
-                                <input type="text" class="form-control" id="signup_username" aria-describedby="usernameHelp"
-                                    placeholder="Enter a new username">
+                                <input formControlName="username" type="text" class="form-control" id="signup_username"
+                                    aria-describedby="usernameHelp" placeholder="Enter a new username">
                                 <small id="usernameHelp" class="form-text text-muted">We'll never share your username
                                     with anyone
                                     else.</small>
                             </div>
                             <div class="form-group">
                                 <label for="signup_password" class="form-label mt-4">Password</label>
-                                <input type="password" class="form-control" id="signup_password" placeholder="Create a password">
+                                <input formControlName="password" type="password" class="form-control"
+                                    id="signup_password" placeholder="Create a password">
                             </div>
                             <div class="form-group">
                                 <label for="re_password" class="form-label mt-4">Confirm your password</label>
-                                <input type="password" class="form-control" id="re_password" placeholder="Confirm your password">
+                                <input formControlName="re_password" type="password" class="form-control"
+                                    id="re_password" placeholder="Confirm your password">
                             </div>
                         </fieldset><br>
                         <button type="submit" class="btn btn-primary">Create Account</button>

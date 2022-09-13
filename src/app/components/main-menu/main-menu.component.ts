@@ -4,6 +4,8 @@ import { MultiplayerMenuComponent } from '../multiplayer-menu/multiplayer-menu.c
 import { AccountPageComponent } from '../account-page/account-page.component';
 import { SettingsPageComponent } from '../settings-page/settings-page.component';
 import { AboutPageComponent } from '../about-page/about-page.component';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-main-menu',
@@ -12,9 +14,14 @@ import { AboutPageComponent } from '../about-page/about-page.component';
 })
 export class MainMenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router, private authService:AuthService) { }
 
   ngOnInit(): void {
   }
 
+  quit(): void {
+    localStorage.removeItem('userId');
+    this.authService.removeAuthProfile();
+    this.router.navigate(["/welcome"]);
+  }
 }

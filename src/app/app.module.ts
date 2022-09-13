@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,9 +21,11 @@ import { AccountPageComponent } from './components/account-page/account-page.com
 import { GameCardComponent } from './components/game-card/game-card.component';
 import { InputImgPreviewComponent } from './components/input-img-preview/input-img-preview.component';
 import { SnakeMultiplayerScreenComponent } from './components/snake-multiplayer-screen/snake-multiplayer-screen.component';
+import { TicTacToeScreenComponent } from './components/tic-tac-toe-screen/tic-tac-toe-screen.component';
 
-import { WebsocketService } from './services/websocket.service';
-import { CookieService } from 'ngx-cookie-service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+
+const config:SocketIoConfig = { url:'http://localhost:3000', options: {} } 
 
 @NgModule({
   declarations: [
@@ -44,12 +47,15 @@ import { CookieService } from 'ngx-cookie-service';
     GameCardComponent,
     InputImgPreviewComponent,
     SnakeMultiplayerScreenComponent,
+    TicTacToeScreenComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    FormsModule,
+    ReactiveFormsModule,
+    SocketIoModule.forRoot(config)
   ],
-  providers: [WebsocketService, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
